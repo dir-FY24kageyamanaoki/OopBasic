@@ -4,13 +4,13 @@ public class ObjectSample {
 
     public static void main(String[] args) {
         //インスタンスの作成
-        var department = new Department("営業部", "××", 1000000);
-        var employee = new Employee("落合",department , "課長", 100);
+        var salesDepartment = new Department("営業部", "××", 1000000);
+        Employee sales = new Sales("落合",salesDepartment  , "課長", 100);
         
         //インスタンスメソッドの呼び出し
-        employee.report();
-        employee.report(2);
-        employee.joinMeeting();
+        sales.report();
+        sales.report(2);
+        sales.joinMeeting();
         
         //1行空ける
         System.out.println("");
@@ -45,10 +45,10 @@ public class ObjectSample {
         System.out.println("");
         
         //アルバイトインスタンスの作成
-        var parttimeWorker = new ParttimeWorker("田中", department);
+        var parttimeWorker = new ParttimeWorker("田中", salesDepartment);
         
         //実装したメソッドの呼び出し
-        ((Workable) employee).work();
+        ((Workable) sales).work();
         ((Workable) engineer).work();
         ((Workable) projectManager).work();
         ((Workable) parttimeWorker).work();
@@ -57,5 +57,5 @@ public class ObjectSample {
     
 }
         
-        
+       
             
